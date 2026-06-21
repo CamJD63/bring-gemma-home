@@ -82,11 +82,17 @@ export default function SightingsMap() {
         </Overlay>
       </LayersControl>
 
-      {/* ~1 mile search radius — where Gemma has stayed close to home */}
+      {/* Search radius hugging the immediate sighting cluster */}
       <Circle
         center={center}
-        radius={1609}
-        pathOptions={{ color: '#d6336c', fillColor: '#d6336c', fillOpacity: 0.06, weight: 1 }}
+        radius={850}
+        pathOptions={{
+          color: '#d6336c',
+          fillColor: '#d6336c',
+          fillOpacity: 0.14,
+          weight: 3,
+          dashArray: '6 6',
+        }}
       />
 
       {/* Last-seen / home marker */}
