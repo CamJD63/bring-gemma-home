@@ -345,10 +345,69 @@ main {
   }
 }
 
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  border-bottom: 2px solid #eaddd8;
+  margin-bottom: 1.75rem;
+}
+
+.tab {
+  position: relative;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 0.7rem 1.1rem;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--ink);
+  background: #fff;
+}
+
+.tab.active {
+  color: var(--pink);
+}
+
+.tab-underline {
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: -2px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--pink);
+}
+
+.tab-panel {
+  min-height: 200px;
+}
+
+@media (max-width: 560px) {
+  .tabs {
+    gap: 0;
+  }
+  .tab {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* ---------- "If you see her" + "spread the word" sections ---------- */
 .see-her,
-.spread {
-  margin-top: 2.5rem;
+.spread,
+.info-section {
+  margin-top: 0;
 }
 
 .section-lede {
